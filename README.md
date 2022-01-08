@@ -21,6 +21,7 @@
 | Column | Type   | Option      |
 | ------ | ------ | ----------- |
 | name   | string | null: false |
+| text   | text   |             |
 
 ### Association
 

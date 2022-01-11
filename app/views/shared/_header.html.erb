@@ -1,0 +1,15 @@
+<div class="njpw_header">
+  <ul class="left_header">
+    <li><%= link_to "トップページ", root_path %></li>
+  </ul>
+  <ul class="right_header">
+    <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "nickname" %></li>
+      <li><%= link_to "ルーム作成", new_room_path, class: "new_room" %></li>
+      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "log_out" %></li>
+    <% else %>
+      <li><%= link_to "ログイン", new_user_session_path, class: "session" %></li>
+      <li><%= link_to "新規登録", new_user_registration_path, class: "registration" %></li>
+    <% end %>
+  </ul>
+</div>

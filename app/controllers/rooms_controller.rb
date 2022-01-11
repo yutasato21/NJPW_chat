@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    @rooms = Room.includs(:room)
+    @rooms = Room.includes(:room)
   end
 
   def new

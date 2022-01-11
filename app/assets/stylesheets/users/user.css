@@ -112,3 +112,51 @@
   padding: 0;
   font-size: 13px;
 }
+
+.user_show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user_name {
+  padding: 30px 0;
+  font-size: 50px;
+  color: #fff;
+}
+
+.user_edit {
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.user_fav {
+  padding: 10px 100px;
+  border: 1px solid #fff;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fav_team_title {
+  font-size: 20px;
+  color: #fff;
+}
+
+.fav_team {
+  color: #fff;
+}
+
+.fav_player_title {
+  font-size: 20px;
+  color: #fff;
+}
+
+.fav_player {
+  color: #fff;
+}

@@ -85,6 +85,21 @@
   background-color: #38aef0;
 }
 
+.account-page .return_btn {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  margin: 20px 0 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  background-color: #38aef0;
+  text-decoration: none;
+}
+
 .account-page .field-label .field_with_errors {
   display: inline-block;
   color: #d65f4c;

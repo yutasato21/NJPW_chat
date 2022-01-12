@@ -6,7 +6,8 @@ h1 {
 }
 
 .chat-room-form {
-  width: 980px;
+  height: 70vh;
+  width: 100vw;
   margin: auto;
   padding: 40px;
   background-color: #fff;
@@ -24,7 +25,7 @@ h1 {
 
 .chat-room-form__input {
   float: left;
-  width: 100%;
+  width: 70%;
   line-height: 30px;
   padding: 10px 15px;
   box-sizing: border-box;

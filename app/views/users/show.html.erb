@@ -4,7 +4,9 @@
     <div class="user_name">
       <%= @user.nickname %>
     </div>
-    <div class="user_edit">編集</div>
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <%= link_to "編集", "#", class: "edit_btn" %>
+    <% end %>
     <div class="user_fav">
       <div class="fav_team_title">
         お気に入りのチーム

@@ -5,8 +5,9 @@ img {
 
 .main {
   box-sizing: border-box;
-  height: calc(100vh - 50px);
-  width: 100%;
+  overflow: auto;
+  height: calc(100vh - 70px);
+  width: 100vw;
   padding: 0 40px;
   background-color: #221716;
 }
@@ -21,7 +22,7 @@ img {
 
 .card {
   width: calc((100% - 50px) / 3);
-  margin-bottom: 40px;
+  margin: 20px 0 20px;
 }
 
 .card__img {
@@ -35,11 +36,6 @@ img {
   font-size: 20px;
   margin-bottom: 8px;
   font-weight: bold;
-}
-
-.card__summary {
-  color: #fff;
-  font-size: 16px;
 }
 
 .card__user {

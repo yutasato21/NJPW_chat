@@ -4,8 +4,9 @@ img {
 }
 
 .main {
-  height: 100vh;
-  width: 100vw;
+  box-sizing: border-box;
+  height: calc(100vh - 50px);
+  width: 100%;
   padding: 0 40px;
   background-color: #221716;
 }

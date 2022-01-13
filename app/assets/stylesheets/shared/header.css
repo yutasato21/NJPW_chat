@@ -1,5 +1,6 @@
 .njpw_header {
-  height: 50px;
+  box-sizing: border-box;
+  height: 70px;
   width: 100vw;
   padding: 10px 0;
   border: 1px solid black;
@@ -13,9 +14,9 @@
   padding: 20px;
 }
 
-.title {
-  font-size: 200px;
-}
+/* .title {
+  font-size: 20px;
+} */
 
 .right_header {
   width: 300px;

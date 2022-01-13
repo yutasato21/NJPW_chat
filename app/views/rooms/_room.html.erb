@@ -1,8 +1,8 @@
 <div class="card">
   <% if room.image.attached? %>
-    <%= link_to image_tag(room.image, class: "card__img"), rooms_path(room.id) %>
+    <%= link_to image_tag(room.image, class: "card__img"), room_path(room.id) %>
   <% else %>
-    <%= link_to image_tag("No image_mini.png", class: "card__img"), rooms_path(room.id) %>
+    <%= link_to image_tag("No image_mini.png", class: "card__img"), room_path(room.id) %>
   <% end %>
   <div class="card__body">
       <%= link_to room.name, '#', class: "card_title" %>

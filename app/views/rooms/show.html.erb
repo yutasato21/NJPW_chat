@@ -14,7 +14,12 @@
       <div class="comment_post"></div>
     </div>
     <div class="comment_form">
-      
+      <%= form_with local: true do |f| %>
+        <div class="form">
+          <%= f.text_field :content, class: "comment_inpuut" %>
+          <%= f.submit '送信', class: "comment_send" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

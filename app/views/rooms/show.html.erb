@@ -14,9 +14,9 @@
       <div class="comment_post"></div>
     </div>
     <div class="comment_form">
-      <%= form_with local: true do |f| %>
+      <%= form_with class: "form" ,local: true do |f| %>
         <div class="form">
-          <%= f.text_field :content, class: "comment_inpuut" %>
+          <%= f.text_field :content, class: "comment_input", placeholder: "コメントを入力" %>
           <%= f.submit '送信', class: "comment_send" %>
         </div>
       <% end %>

@@ -1,0 +1,47 @@
+.rooms_show_main {
+  box-sizing: border-box;
+  height: calc(100vh - 70px);
+  display: flex;
+}
+
+.match_card {
+  width: calc(100vw - 730px - 350px);
+  background-color: #484848;
+}
+
+.center_column {
+  width: 730px;
+  padding: 0 2px;
+  background-color: dimgray;
+}
+
+.movie_place {
+  height: 420px;
+  color: white;
+  background-color: #221716;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introduction_column {
+  height: calc(100% - 420px);
+  background-color: #484848;
+}
+
+.right_column {
+  width: 350px;
+  background-color: #222425;
+}
+
+.comment_column {
+  height: calc(100% - 70px);
+}
+
+.comment_form {
+  box-sizing: border-box;
+  height: 70px;
+  width: 100%;
+  border-top: 1px solid black;
+  background-color: #273942;
+}

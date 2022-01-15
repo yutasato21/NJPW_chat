@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: :new
+  before_action :set_room, only: :show
 
   def index
     @rooms = Room.includes(:user).order('created_at DESC')
@@ -19,12 +20,15 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @room = Room.find(params[:id])
   end
 
   private
 
   def room_params
     params.require(:room).permit(:name, :text, :image).merge(user_id: current_user.id)
+  end
+
+  def set_room
+    @room = Room.find(params[:id])
   end
 end

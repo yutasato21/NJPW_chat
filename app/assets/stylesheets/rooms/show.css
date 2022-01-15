@@ -22,6 +22,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.movie_place_instruction {
+  margin-bottom: 50px;
+}
+
+.room_edit_btn {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .introduction_column {
@@ -86,6 +99,7 @@
   border: 0;
   margin-right: 10px;
   background-color: #dddddd;
+  border-radius: 2px;
 }
 
 .comment_send {

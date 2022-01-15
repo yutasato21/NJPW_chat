@@ -38,8 +38,14 @@
 }
 
 .introduction_column {
+  box-sizing: border-box;
   height: calc(100% - 420px);
+  padding: 20px;
   background-color: #484848;
+}
+
+.introduction_text {
+  color: #fff;
 }
 
 .right_column {

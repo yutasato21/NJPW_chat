@@ -7,7 +7,9 @@
       <%= link_to "ルーム編集", "#", class: "room_edit_btn" %>
     </div>
     <div class="introduction_column">
-      <div class="introduction_text"></div>
+      <div class="introduction_text">
+        <%= @room.text %>
+      </div>
     </div>
   </div>
   <div class="right_column">

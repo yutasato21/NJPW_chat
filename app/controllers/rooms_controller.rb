@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: :new
-  before_action :set_room, only: :show
+  before_action :set_room, only: [:show, :edit]
 
   def index
     @rooms = Room.includes(:user).order('created_at DESC')

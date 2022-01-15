@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: :new
-  before_action :set_room, only: [:show, :edit]
+  before_action :set_room, only: [:show, :edit, :update]
 
   def index
     @rooms = Room.includes(:user).order('created_at DESC')
@@ -23,11 +23,14 @@ class RoomsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-    
+    if @room.update(room_params)
+      redirect_to room_path
+    else
+      render :edit
+    end
   end
 
   private

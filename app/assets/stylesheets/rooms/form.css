@@ -1,3 +1,21 @@
+h1 {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chat-room-form {
+  height: 70vh;
+  width: calc(100vw - 80px);
+  margin: auto;
+  padding: 40px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 .chat-room-form__label {
   display: block;
   line-height: 50px;
@@ -19,6 +37,7 @@
   color: #fff;
   background-color: #38aef0;
   border: 0;
+  border-radius: 5px;
 }
 
 .chat-room-form__field {

@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!, only: :new
+  before_action :authenticate_user!, only: [:new, :edit]
   before_action :set_room, only: [:show, :edit, :update]
+  before_action :move_to_index, only: :edit
 
   def index
     @rooms = Room.includes(:user).order('created_at DESC')
@@ -41,5 +42,9 @@ class RoomsController < ApplicationController
 
   def set_room
     @room = Room.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to action: :index unless current_user.id == @room.user_id
   end
 end

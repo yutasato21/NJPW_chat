@@ -7,12 +7,17 @@ RSpec.describe Room, type: :model do
 
   describe 'ルーム作成' do
     context 'ルーム作成できる場合' do
-      it 'name、text、user_idが存在していれば作成できる' do
+      it 'name、text、image、user_idが存在していれば作成できる' do
         expect(@room).to be_valid
       end
 
       it 'textが空でも作成できる' do
         @room.text = ''
+        expect(@room).to be_valid
+      end
+
+      it 'imageが空でも作成できる' do
+        @room.image = nil
         expect(@room).to be_valid
       end
     end

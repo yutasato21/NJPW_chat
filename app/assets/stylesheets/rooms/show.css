@@ -29,7 +29,22 @@
   margin-bottom: 50px;
 }
 
+.room_edit_destroy_btn {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .room_edit_btn {
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.room_destroy_btn {
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 10px;
@@ -74,11 +89,13 @@
 
 .comment_nickname {
   margin-right: 8px;
+  font-size: 15px;
   color: #2eb343;
   white-space: nowrap;
 }
 
 .comment_content {
+  font-size: 15px;
   color: #fff;
   overflow-wrap: break-word;
   word-break: break-all;

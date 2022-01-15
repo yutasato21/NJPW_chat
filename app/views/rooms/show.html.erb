@@ -4,7 +4,10 @@
   <div class="center_column">
     <div class="movie_place">
       <div class="movie_place_instruction">※ここに配信画面を置いて下さい</div>
-      <%= link_to "ルーム編集", "#", class: "room_edit_btn" %>
+      <div class="room_edit_destroy_btn">
+        <%= link_to "ルーム編集", "#", class: "room_edit_btn" %>
+        <%= link_to "ルーム削除", "#", class: "room_destroy_btn" %>
+      </div>
     </div>
     <div class="introduction_column">
       <div class="introduction_text">

@@ -1,0 +1,51 @@
+<%= render "shared/header" %>
+<div class="rooms_show_main">
+  <div class="match_card"></div>
+  <div class="center_column">
+    <div class="movie_place">
+      <div class="movie_place_instruction">※ここに配信画面を置いて下さい</div>
+      <% if user_signed_in? && current_user.id == @room.user_id %>
+        <div class="room_edit_destroy_btn">
+          <%= link_to "ルーム編集", "#", class: "room_edit_btn" %>
+          <%= link_to "ルーム削除", "#", class: "room_destroy_btn" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="introduction_column">
+      <div class="introduction_text">
+        <%= @room.text %>
+      </div>
+    </div>
+  </div>
+  <div class="right_column">
+    <div class="comment_column">
+      <div class="comment_post">
+        <div class="comment_create">12:00</div>
+        <div class="comment_nickname">yuta</div>
+        <div class="comment_content">こんにちは</div>
+      </div>
+      <div class="comment_post">
+        <div class="comment_create">12:01</div>
+        <div class="comment_nickname">けい</div>
+        <div class="comment_content">Hello! Nice to meet you</div>
+      </div>
+      <div class="comment_post">
+        <div class="comment_create">12:01</div>
+        <div class="comment_nickname">けい</div>
+        <div class="comment_content">aaaaasjnasjvnjnnavsndknvapirnaisnpvnspvsksndvnsinvpsinvpisdnvpanspvnps</div>
+      </div>
+    </div>
+    <div class="comment_form">
+      <% if user_signed_in? %>
+        <%= form_with class: "form" ,local: true do |f| %>
+          <div class="form">
+            <%= f.text_field :content, class: "comment_input", placeholder: "コメントを入力" %>
+            <%= f.submit '送信', class: "comment_send" %>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="no_form_text">コメントをするにはログイン、または新規登録して下さい</div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -34,11 +34,15 @@
       </div>
     </div>
     <div class="comment_form">
-      <%= form_with class: "form" ,local: true do |f| %>
-        <div class="form">
-          <%= f.text_field :content, class: "comment_input", placeholder: "コメントを入力" %>
-          <%= f.submit '送信', class: "comment_send" %>
-        </div>
+      <% if user_signed_in? %>
+        <%= form_with class: "form" ,local: true do |f| %>
+          <div class="form">
+            <%= f.text_field :content, class: "comment_input", placeholder: "コメントを入力" %>
+            <%= f.submit '送信', class: "comment_send" %>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="no_form_text">コメントをするにはログイン、または新規登録して下さい</div>
       <% end %>
     </div>
   </div>

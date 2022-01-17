@@ -1,13 +1,13 @@
 <%= render "shared/header" %>
-<div class="rooms_show_main">
+<div class="comments_index_main">
   <div class="match_card"></div>
   <div class="center_column">
     <div class="movie_place">
       <div class="movie_place_instruction">※ここに配信画面を置いて下さい</div>
       <% if user_signed_in? && current_user.id == @room.user_id %>
         <div class="room_edit_destroy_btn">
-          <%= link_to "ルーム編集", edit_room_path(params[:id]), class: "room_edit_btn" %>
-          <%= link_to "ルーム削除", room_path(params[:id]), method: :delete, class: "room_destroy_btn" %>
+          <%= link_to "ルーム編集", edit_room_path(params[:room_id]), class: "room_edit_btn" %>
+          <%= link_to "ルーム削除", room_path(params[:room_id]), method: :delete, class: "room_destroy_btn" %>
         </div>
       <% end %>
     </div>

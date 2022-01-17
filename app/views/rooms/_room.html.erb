@@ -1,11 +1,11 @@
 <div class="card">
   <% if room.image.attached? %>
-    <%= link_to image_tag(room.image, class: "card__img"), room_path(room.id) %>
+    <%= link_to image_tag(room.image, class: "card__img"), room_comments_path(room.id) %>
   <% else %>
-    <%= link_to image_tag("No image_mini.png", class: "card__img"), room_path(room.id) %>
+    <%= link_to image_tag("No image_mini.png", class: "card__img"), room_comments_path(room.id) %>
   <% end %>
   <div class="card__body">
-      <%= link_to room.name, room_path(room.id), class: "card_title" %>
+      <%= link_to room.name, room_comments_path(room.id), class: "card_title" %>
     <%= link_to "by " + room.user.nickname, user_path(room.user.id), class: "card__user" %>
   </div>
 </div>

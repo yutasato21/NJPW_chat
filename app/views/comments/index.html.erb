@@ -19,21 +19,19 @@
   </div>
   <div class="right_column">
     <div class="comment_column">
-      <div class="comment_post">
-        <div class="comment_create">12:00</div>
-        <div class="comment_nickname">yuta</div>
-        <div class="comment_content">こんにちは</div>
-      </div>
-      <div class="comment_post">
-        <div class="comment_create">12:01</div>
-        <div class="comment_nickname">けい</div>
-        <div class="comment_content">Hello! Nice to meet you</div>
-      </div>
-      <div class="comment_post">
-        <div class="comment_create">12:01</div>
-        <div class="comment_nickname">けい</div>
-        <div class="comment_content">aaaaasjnasjvnjnnavsndknvapirnaisnpvnspvsksndvnsinvpsinvpisdnvpanspvnps</div>
-      </div>
+      <% @comments.each do |comment| %>
+        <div class="comment_post">
+          <div class="comment_create">
+            <%= comment.created_at.strftime("%H:%M") %>
+          </div>
+          <div class="comment_nickname">
+            <%= comment.user.nickname %>
+          </div>
+          <div class="comment_content">
+            <%= comment.content %>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="comment_form">
       <% if user_signed_in? %>

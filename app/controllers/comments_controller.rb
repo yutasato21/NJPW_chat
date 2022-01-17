@@ -8,8 +8,8 @@ class CommentsController < ApplicationController
   def create
     @room = Room.find(params[:room_id])
     @comment = @room.comments.new(comment_params)
-    if @comment.create(content: params[:content])
-      render json:{ comment: comment }
+    if @comment.save(content: params[:content])
+      render json:{ comment: @comment }
     else
       @comments = @room.comments.includes(:user)
       render :index

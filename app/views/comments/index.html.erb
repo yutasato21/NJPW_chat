@@ -32,12 +32,15 @@
           </div>
         </div>
       <% end %>
+
+      <div id="list"></div>
+      
     </div>
     <div class="comment_form">
       <% if user_signed_in? %>
         <%= form_with model: [@room, @comment], class: "form", id: "form" ,local: true do |f| %>
           <div class="form">
-            <%= f.text_field :content, class: "comment_input", placeholder: "コメントを入力" %>
+            <%= f.text_field :content, placeholder: "コメントを入力", class: "comment_input", id: "content" %>
             <%= f.submit '送信', class: "comment_send", id: "comment_btn" %>
           </div>
         <% end %>

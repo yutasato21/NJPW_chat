@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :set_room, only: [:show, :edit, :update, :destroy]
+  before_action :set_room, only: [:edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :destroy]
 
   def index
@@ -19,10 +19,7 @@ class RoomsController < ApplicationController
       render :new
     end
   end
-
-  def show
-  end
-
+  
   def edit
   end
 

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'rooms#index'
 
   resources :users, only: :show
-  resources :rooms do
+  resources :rooms, except: :show do
     resources :comments, only: [:index, :create]
   end
 end

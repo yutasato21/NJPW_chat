@@ -1,8 +1,6 @@
 class CommentsController < ApplicationController
   def index
-    @room = Room.find(params[:room_id])
-    @comments = @room.comments.order(id: "DESC")
-    @comment = Comment.new
+    
   end
 
   def create
@@ -14,6 +12,11 @@ class CommentsController < ApplicationController
       @comments = @room.comments.includes(:user)
       render :index
     end
+  end
+
+  def destroy
+    @comment.destroy
+    redirect_to root_path
   end
 
   private

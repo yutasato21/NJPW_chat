@@ -25,7 +25,7 @@ function post () {
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
     const roomPath = location.href
-    XHR.open("POST", `${roomPath}`, true)
+    XHR.open("POST", `${roomPath}/comments`, true)
     XHR.responseType = "json";
     XHR.send(formData);
     XHR.onload = () => {

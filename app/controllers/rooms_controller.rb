@@ -19,6 +19,12 @@ class RoomsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @room = Room.find(params[:id])
+    @comments = @room.comments.order(id: "DESC")
+    @comment = Comment.new
+  end
   
   def edit
   end

@@ -1,15 +1,17 @@
 const buildHTML = (XHR) => {
-  const item = XHR.response.comment;
+  const comment = XHR.response.comment;
+  const userName = XHR.response.user;
+  const time = XHR.response.time;
   const html = `
     <div class="comment_post">
       <div class="comment_create">
-        ${item.created_at}
+        ${time}
       </div>
       <div class="comment_nickname">
-        ${item.username}
+        ${userName}
       </div>
       <div class="comment_content">
-        ${item.content}
+        ${comment.content}
       </div>
     </div>`;
   return html;
@@ -27,7 +29,6 @@ function post () {
     XHR.responseType = "json";
     XHR.send(formData);
     XHR.onload = () => {
-      
       const list = document.getElementById("list");
       const formText = document.getElementById("content");
       list.insertAdjacentHTML("afterend", buildHTML(XHR));

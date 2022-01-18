@@ -19,6 +19,9 @@
   </div>
   <div class="right_column">
     <div class="comment_column">
+
+      <div id="list"></div>
+
       <% @comments.each do |comment| %>
         <div class="comment_post">
           <div class="comment_create">
@@ -32,9 +35,6 @@
           </div>
         </div>
       <% end %>
-
-      <div id="list"></div>
-      
     </div>
     <div class="comment_form">
       <% if user_signed_in? %>

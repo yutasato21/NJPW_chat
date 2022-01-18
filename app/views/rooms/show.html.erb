@@ -1,5 +1,5 @@
 <%= render "shared/header" %>
-<div class="rooms_show_main">
+<div class="comments_index_main">
   <div class="match_card"></div>
   <div class="center_column">
     <div class="movie_place">
@@ -19,28 +19,29 @@
   </div>
   <div class="right_column">
     <div class="comment_column">
-      <div class="comment_post">
-        <div class="comment_create">12:00</div>
-        <div class="comment_nickname">yuta</div>
-        <div class="comment_content">こんにちは</div>
-      </div>
-      <div class="comment_post">
-        <div class="comment_create">12:01</div>
-        <div class="comment_nickname">けい</div>
-        <div class="comment_content">Hello! Nice to meet you</div>
-      </div>
-      <div class="comment_post">
-        <div class="comment_create">12:01</div>
-        <div class="comment_nickname">けい</div>
-        <div class="comment_content">aaaaasjnasjvnjnnavsndknvapirnaisnpvnspvsksndvnsinvpsinvpisdnvpanspvnps</div>
-      </div>
+
+      <div id="list"></div>
+
+      <% @comments.each do |comment| %>
+        <div class="comment_post">
+          <div class="comment_create">
+            <%= comment.created_at.strftime("%H:%M") %>
+          </div>
+          <div class="comment_nickname">
+            <%= comment.user.nickname %>
+          </div>
+          <div class="comment_content">
+            <%= comment.content %>
+          </div>
+        </div>
+      <% end %>
     </div>
     <div class="comment_form">
       <% if user_signed_in? %>
-        <%= form_with class: "form" ,local: true do |f| %>
+        <%= form_with model: [@room, @comment], class: "form", id: "form" ,local: true do |f| %>
           <div class="form">
-            <%= f.text_field :content, class: "comment_input", placeholder: "コメントを入力" %>
-            <%= f.submit '送信', class: "comment_send" %>
+            <%= f.text_field :content, placeholder: "コメントを入力", class: "comment_input", id: "content" %>
+            <%= f.submit '送信', class: "comment_send", id: "comment_btn" %>
           </div>
         <% end %>
       <% else %>

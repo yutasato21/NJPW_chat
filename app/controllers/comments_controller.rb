@@ -1,8 +1,4 @@
 class CommentsController < ApplicationController
-  def index
-    
-  end
-
   def create
     @room = Room.find(params[:room_id])
     @comment = @room.comments.new(comment_params)
@@ -14,10 +10,10 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    @comment.destroy
-    redirect_to root_path
-  end
+  #def destroy
+    #@comment.destroy
+    #redirect_to root_path
+  #end
 
   private
 

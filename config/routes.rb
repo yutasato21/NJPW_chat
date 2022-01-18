@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   resources :users, only: :show
   resources :rooms do
-    resources :comments, only: [:index, :create, :destroy]
+    resources :comments, only: :create
   end
 end

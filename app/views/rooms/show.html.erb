@@ -1,6 +1,23 @@
 <%= render "shared/header" %>
 <div class="comments_index_main">
-  <div class="match_card"></div>
+  <div class="match_card">
+    <div class="match_make">
+      <div class="match_make_header">
+        <div class="game_number">第一試合</div>
+      </div>
+      <div class="match_make_main">
+        <div class="player_list">
+          <div class="player_name">オカダ カズチカ</div>
+          <div class="player_name">オカダ カズチカ</div>
+        </div>
+        <div class="versus">VS</div>
+        <div class="player_list">
+          <div class="player_name">鷹木 信悟</div>
+          <div class="player_name">鷹木 信悟</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="center_column">
     <div class="movie_place">
       <div class="movie_place_instruction">※ここに配信画面を置いて下さい</div>
@@ -33,6 +50,9 @@
           <div class="comment_content">
             <%= comment.content %>
           </div>
+          <% if user_signed_in? && current_user.id == comment.user_id %>
+            <%= link_to "削除", room_comment_path(params[:id]), method: :delete, class: "comment_option_btn hidden" %>
+          <% end %>
         </div>
       <% end %>
     </div>

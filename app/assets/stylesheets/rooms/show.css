@@ -4,9 +4,49 @@
   display: flex;
 }
 
-.match_card {
+.match_column {
   width: calc(100vw - 730px - 350px);
   background-color: #484848;
+  overflow: scroll;
+}
+
+.match_make {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 2px solid dimgray;
+}
+
+.match_make_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_number {
+  font-size: 20px;
+  color: #fff;
+}
+
+.match_make_main {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player_list {
+  width: 150px;
+}
+
+.player_name {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.versus {
+  font-size: 20px;
 }
 
 .center_column {
@@ -93,6 +133,7 @@
   margin-right: 8px;
   font-size: 15px;
   color: #2eb343;
+  text-decoration: none;
   white-space: nowrap;
 }
 
@@ -101,6 +142,21 @@
   color: #fff;
   overflow-wrap: break-word;
   word-break: break-all;
+}
+
+.comment_option_btn {
+  box-sizing: border-box;
+  padding: 2px 5px;
+  border: 1px solid #484848;
+  margin-left: 10px;
+  font-size: 8px;
+  text-decoration: none;
+  color: #484848;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
 }
 
 .comment_form {

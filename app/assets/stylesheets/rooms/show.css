@@ -4,14 +4,16 @@
   display: flex;
 }
 
-.match_card {
+.match_column {
   width: calc(100vw - 730px - 350px);
   background-color: #484848;
+  overflow: scroll;
 }
 
 .match_make {
   width: 100%;
-  overflow: scroll;
+  padding: 20px 0;
+  border-top: 2px solid dimgray;
 }
 
 .match_make_header {
@@ -37,7 +39,7 @@
 }
 
 .player_name {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 15px;
   color: #fff;
   text-align: center;

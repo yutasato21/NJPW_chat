@@ -149,9 +149,7 @@
           <div class="comment_create">
             <%= comment.created_at.strftime("%H:%M") %>
           </div>
-          <div class="comment_nickname">
-            <%= comment.user.nickname %>
-          </div>
+          <%=link_to comment.user.nickname, user_path(comment.user.id), class: "comment_nickname" %>
           <div class="comment_content">
             <%= comment.content %>
           </div>

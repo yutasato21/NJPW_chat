@@ -1,0 +1,54 @@
+.game_number_column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game_number_title {
+  color: #fff;
+  padding: 20px 0;
+  font-size: 25px;
+}
+
+.game_number_form {
+  width: 35px;
+}
+
+.match_player_column {
+  padding: 20px 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team_player_column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team_player_form {
+  margin-bottom: 20px;
+}
+
+.versus_new {
+  font-size: 30px;
+  color: #fff;
+}
+
+.match_btn_column {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.match_btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #38aef0;
+}

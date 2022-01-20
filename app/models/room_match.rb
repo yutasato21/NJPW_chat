@@ -1,0 +1,3 @@
+class RoomMatch < ApplicationRecord
+  
+end

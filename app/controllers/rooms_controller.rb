@@ -21,6 +21,7 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @matches = @room.matches.order(game_number: "ASC")
     @comments = @room.comments.order(id: "DESC")
     @comment = Comment.new
   end

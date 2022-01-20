@@ -4,9 +4,6 @@ class CommentsController < ApplicationController
     @comment = @room.comments.new(comment_params)
     if @comment.save(content: params[:content])
       render json:{ comment: @comment, user: @comment.user.nickname, time: @comment.created_at.strftime("%H:%M") }
-    else
-      @comments = @room.comments.includes(:user)
-      render :index
     end
   end
 

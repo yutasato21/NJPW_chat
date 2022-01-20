@@ -1,0 +1,29 @@
+<%= render "shared/header" %>
+<div class="main">
+  <%= form_with model: [@room, @match], local: true do |f| %>
+    <div class="game_number_column">
+      <div class="game_number_title">
+        第<%= f.text_field :game_number, class: "game_number_form" %>試合
+      </div>
+    </div>
+    <div class="match_player_column">
+      <div class="team_player_column">
+        <%= f.text_field :team_a_player, class: "team_player_form" %>
+        <%= f.text_field :team_a_player2, class: "team_player_form" %>
+        <%= f.text_field :team_a_player3, class: "team_player_form" %>
+        <%= f.text_field :team_a_player4, class: "team_player_form" %>
+        <%= f.text_field :team_a_player5, class: "team_player_form" %>
+      </div>
+      <div class="team_player_column">
+        <%= f.text_field :team_b_player, class: "team_player_form" %>
+        <%= f.text_field :team_b_player2, class: "team_player_form" %>
+        <%= f.text_field :team_b_player3, class: "team_player_form" %>
+        <%= f.text_field :team_b_player4, class: "team_player_form" %>
+        <%= f.text_field :team_b_player5, class: "team_player_form" %>
+      </div>
+    </div>
+    <div class="match_btn_column">
+      <%= f.submit "作成", class: "match_btn" %>
+    </div>
+  <% end %>
+</div>

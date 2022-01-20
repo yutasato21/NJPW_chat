@@ -3,7 +3,7 @@
   <div class="match_column">
     <% if user_signed_in? && current_user.id == @room.user_id %>
       <div class="match_make_btn">
-        <%= link_to "カード作成", "", class: "room_btn" %>
+        <%= link_to "カード作成", new_room_match_path(params[:id]), class: "room_btn" %>
       </div>
     <% end %>
     <div class="match_make">

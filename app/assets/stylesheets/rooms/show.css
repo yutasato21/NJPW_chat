@@ -10,6 +10,13 @@
   overflow: scroll;
 }
 
+.match_make_btn {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .match_make {
   width: 100%;
   padding: 20px 0;
@@ -76,15 +83,7 @@
   align-items: center;
 }
 
-.room_edit_btn {
-  padding: 10px;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.room_destroy_btn {
+.room_btn {
   padding: 10px;
   border: 1px solid #fff;
   border-radius: 10px;

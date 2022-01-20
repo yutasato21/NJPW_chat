@@ -56,11 +56,19 @@
 
 ## matches テーブル
 
-| Column        | Type       | Option                         |
-| ------------- | ---------- | ------------------------------ |
-| team_a_player | string     |                                |
-| team_b_player | string     |                                |
-| user_id       | references | null: false, foreign_key: true |
+| Column         | Type       | Option                         |
+| -------------- | ---------- | ------------------------------ |
+| team_a_player  | string     | null: false                    |
+| team_a_player2 | string     |                                |
+| team_a_player3 | string     |                                |
+| team_a_player4 | string     |                                |
+| team_a_player5 | string     |                                |
+| team_b_player  | string     | null: false                    |
+| team_b_player2 | string     |                                |
+| team_b_player3 | string     |                                |
+| team_b_player4 | string     |                                |
+| team_b_player5 | string     |                                |
+| user_id        | references | null: false, foreign_key: true |
 
 ### Association
 

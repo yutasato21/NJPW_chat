@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
-  before_action :set_room, only: [:edit, :update, :destroy]
+  before_action :set_room, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index, only: [:edit, :destroy]
 
   def index
@@ -21,7 +21,6 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @room = Room.find(params[:id])
     @comments = @room.comments.order(id: "DESC")
     @comment = Comment.new
   end
@@ -38,6 +37,7 @@ class RoomsController < ApplicationController
   end
 
   def destroy
+    @room.comments.destroy_all
     @room.destroy
     redirect_to root_path
   end

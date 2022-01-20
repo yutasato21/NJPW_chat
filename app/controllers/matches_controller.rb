@@ -1,4 +1,4 @@
-class MatchsController < ApplicationController
+class MatchesController < ApplicationController
   def new
     
   end

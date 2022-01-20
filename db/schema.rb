@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2022_01_20_031725) do
   end
 
   create_table "matches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "game_number", null: false
     t.string "team_a_player", null: false
     t.string "team_a_player2"
     t.string "team_a_player3"

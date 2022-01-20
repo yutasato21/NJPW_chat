@@ -1,6 +1,7 @@
 class CreateMatches < ActiveRecord::Migration[6.0]
   def change
     create_table :matches do |t|
+      t.integer    :game_number,    null: false
       t.string     :team_a_player,  null: false
       t.string     :team_a_player2
       t.string     :team_a_player3

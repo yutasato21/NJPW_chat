@@ -37,7 +37,6 @@ class RoomsController < ApplicationController
   end
 
   def destroy
-    @room.comments.destroy_all
     @room.destroy
     redirect_to root_path
   end

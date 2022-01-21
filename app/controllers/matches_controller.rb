@@ -16,7 +16,7 @@ class MatchesController < ApplicationController
   end
 
   def edit
-    
+    @match = Match.find(params[:id])
   end
 
   def update

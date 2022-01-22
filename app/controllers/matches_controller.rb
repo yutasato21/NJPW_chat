@@ -1,5 +1,6 @@
 class MatchesController < ApplicationController
-  before_action :set_room, only: [:new, :create]
+  before_action :set_room, only: [:new, :create, :edit, :update]
+  before_action :set_match, only: [:edit, :update]
   before_action :move_to_index, only: :new
 
   def new
@@ -16,11 +17,14 @@ class MatchesController < ApplicationController
   end
 
   def edit
-    @match = Match.find(params[:id])
   end
 
   def update
-    
+    if @match.update(match_params)
+      redirect_to room_path(params[:room_id])
+    elsif 
+      render :edit
+    end
   end
 
   private
@@ -31,6 +35,10 @@ class MatchesController < ApplicationController
 
   def set_room
     @room = Room.find(params[:room_id])
+  end
+
+  def set_match
+    @match = Match.find(params[:id])
   end
 
   def move_to_index

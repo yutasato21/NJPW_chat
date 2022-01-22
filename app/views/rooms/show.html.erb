@@ -6,52 +6,9 @@
         <%= link_to "カード作成", new_room_match_path(params[:id]), class: "room_btn" %>
       </div>
     <% end %>
-    <% @matches.each do |match| %>
-      <div class="match_make">
-        <div class="match_make_header">
-          <div class="game_number">
-            第<%= match.game_number %>試合
-          </div>
-        </div>
-        <div class="match_make_main">
-          <div class="player_list">
-            <div class="player_name">
-              <%= match.team_a_player %>
-            </div>
-            <div class="player_name">
-              <%= match.team_a_player2 %>
-            </div>
-            <div class="player_name">
-              <%= match.team_a_player3 %>
-            </div>
-            <div class="player_name">
-              <%= match.team_a_player4 %>
-            </div>
-            <div class="player_name">
-              <%= match.team_a_player5 %>
-            </div>
-          </div>
-          <div class="versus">VS</div>
-          <div class="player_list">
-            <div class="player_name">
-              <%= match.team_b_player %>
-            </div>
-            <div class="player_name">
-              <%= match.team_b_player2 %>
-            </div>
-            <div class="player_name">
-              <%= match.team_b_player3 %>
-            </div>
-            <div class="player_name">
-              <%= match.team_b_player4 %>
-            </div>
-            <div class="player_name">
-              <%= match.team_b_player5 %>
-            </div>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    
+    <%= render partial: 'match', collection: @matches %>
+
   </div>
   <div class="center_column">
     <div class="movie_place">

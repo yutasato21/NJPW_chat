@@ -56,6 +56,24 @@
   font-size: 20px;
 }
 
+.match_btn {
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.match_edit_destroy_btn {
+  box-sizing: border-box;
+  padding: 2px 5px;
+  border: 1px solid #222425;
+  border-radius: 4px;
+  font-size: 8px;
+  text-decoration: none;
+  color: #222425;
+  white-space: nowrap;
+}
+
 .center_column {
   width: 730px;
   padding: 0 2px;

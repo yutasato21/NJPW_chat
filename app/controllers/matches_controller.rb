@@ -1,7 +1,7 @@
 class MatchesController < ApplicationController
   before_action :set_room, only: [:new, :create, :edit, :update]
   before_action :set_match, only: [:edit, :update, :destroy]
-  before_action :move_to_index, only: [:new, :edit]
+  before_action :move_to_index, only: [:new, :edit, :destroy]
 
   def new
     @match = Match.new

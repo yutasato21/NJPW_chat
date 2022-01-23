@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  before_action :set_comment, only: :destroy
+  before_action :move_to_index, only: :destroy
+
   def create
     @room = Room.find(params[:room_id])
     @comment = @room.comments.new(comment_params)
@@ -8,7 +11,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to room_path(params[:room_id])
   end
@@ -17,5 +19,13 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:content).merge(user_id: current_user.id)
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless current_user.id == @comment.user_id
   end
 end

@@ -41,7 +41,7 @@
             <%= comment.content %>
           </div>
           <% if user_signed_in? && current_user.id == comment.user_id %>
-            <%= link_to "削除", room_comment_path(params[:id]), method: :delete, class: "comment_option_btn hidden" %>
+            <%= link_to "削除", "/rooms/#{@room.id}/comments/#{comment.id}", method: :delete, class: "comment_option_btn" %>
           <% end %>
         </div>
       <% end %>

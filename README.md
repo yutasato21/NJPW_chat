@@ -10,11 +10,9 @@
 
 ### Association
 
-- has_many room_users
+- has_many room
 - has_many comments
 - has_many favorites
-- has_many supports
-- has_many follows
 
 ## rooms テーブル
 
@@ -25,21 +23,9 @@
 
 ### Association
 
-- has_many room_users
 - has_many comments
 - has_many matches
-
-## room_users テーブル
-
-| Column  | Type       | Option                         |
-| ------- | ---------- | ------------------------------ |
-| user_id | references | null: false, foreign_key: true |
-| room_id | references | null: false, foreign_key: true |
-
-### Association
-
 - belongs_to user
-- belongs_to room
 
 ## comments テーブル
 
@@ -73,7 +59,6 @@
 ### Association
 
 - belongs_to room
-- has_one support
 
 ## favorites テーブル
 
@@ -82,29 +67,6 @@
 | player_id | integer    |                                |
 | team_id   | integer    |                                |
 | user_id   | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to user
-
-## supports テーブル
-
-| Column   | Type       | Option                         |
-| -------- | ---------- | ------------------------------ |
-| vote     |            |                                |
-| user_id  | references | null: false, foreign_key: true |
-| match_id | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to user
-- belongs_to match
-
-## follows テーブル
-
-| Column  | Type       | Option                         |
-| ------- | ---------- | ------------------------------ |
-| user_id | references | null: false, foreign_key: true |
 
 ### Association
 

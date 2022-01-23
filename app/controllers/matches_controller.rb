@@ -27,6 +27,10 @@ class MatchesController < ApplicationController
     end
   end
 
+  def destroy
+    
+  end
+
   private
 
   def match_params

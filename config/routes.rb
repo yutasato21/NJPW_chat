@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :rooms do
     resources :comments, only: [:create, :destroy]
-    resources :matches, only: [:new, :create, :edit, :update]
+    resources :matches, only: [:new, :create, :edit, :update, :destroy]
   end
 end

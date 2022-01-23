@@ -41,8 +41,10 @@
       </div>
     </div>
   </div>
-  <div class="match_btn">
-    <%= link_to "編集", "/rooms/#{params[:id]}/matches/#{match.id}/edit", class: "match_edit_destroy_btn" %>
-    <%= link_to "削除", "#", class: "match_edit_destroy_btn" %>
-  </div>
+  <% if user_signed_in? && current_user.id == @room.id %>
+    <div class="match_btn">
+      <%= link_to "編集", "/rooms/#{params[:id]}/matches/#{match.id}/edit", class: "match_edit_destroy_btn" %>
+      <%= link_to "削除", "/rooms/#{params[:id]}/matches/#{match.id}", method: :delete, class: "match_edit_destroy_btn" %>
+    </div>
+  <% end %>
 </div>

@@ -44,6 +44,7 @@
 
 | Column         | Type       | Option                         |
 | -------------- | ---------- | ------------------------------ |
+| game_number    | integer    | null: false                    |
 | team_a_player  | string     | null: false                    |
 | team_a_player2 | string     |                                |
 | team_a_player3 | string     |                                |

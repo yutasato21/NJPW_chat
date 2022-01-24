@@ -61,13 +61,13 @@
 
 - belongs_to room
 
-## favorites テーブル
+## favorites テーブル ※必須項目では無いため後日追加実装予定
 
-| Column    | Type       | Option                         |
-| --------- | ---------- | ------------------------------ |
-| player_id | integer    |                                |
-| team_id   | integer    |                                |
-| user_id   | references | null: false, foreign_key: true |
+| Column     | Type       | Option                         |
+| ---------- | ---------- | ------------------------------ |
+| fav_player | string     |                                |
+| fav_team   | string     |                                |
+| user_id    | references | null: false, foreign_key: true |
 
 ### Association
 

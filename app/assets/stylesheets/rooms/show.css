@@ -172,10 +172,6 @@
   white-space: nowrap;
 }
 
-.hidden {
-  display: none;
-}
-
 .comment_form {
   box-sizing: border-box;
   height: 70px;

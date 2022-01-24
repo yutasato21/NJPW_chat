@@ -10,7 +10,7 @@
 | 実装した機能についての画像やGIFおよびその説明 | 
 | 実装予定の機能                                | お気に入り機能 |
 | データベース設計                              | [![Image from Gyazo](https://i.gyazo.com/eaf9299eb22bf090cbe1f543b88aeb86.png)](https://gyazo.com/eaf9299eb22bf090cbe1f543b88aeb86) |
-| 画面遷移図                                    |
+| 画面遷移図                                    | [![Image from Gyazo](https://i.gyazo.com/d2e9b18e38a0a13684ff226bc2d1b7d4.png)](https://gyazo.com/d2e9b18e38a0a13684ff226bc2d1b7d4)
 | 開発環境                                      | * フロントエンド：HTML,CSS / JavaScript  * バックエンド：Ruby / Ruby on Rails  * テスト：RSpec  テキストエディタ：Visual Studio Code  * タスク管理：GitHubプロジェクトボード |
 | ローカルでの動作方法                          | git clone https://github.com/yutasato21/NJPW_chat  % cd NJPW_chat  % bundle install  % yarn install |
 

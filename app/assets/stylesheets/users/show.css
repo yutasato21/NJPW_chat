@@ -11,6 +11,12 @@
   color: #fff;
 }
 
+.user_edit_menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .edit_btn {
   padding: 10px 30px;
   border: 1px solid #fff;

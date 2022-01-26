@@ -5,7 +5,9 @@
       <%= @user.nickname %>
     </div>
     <% if user_signed_in? && current_user.id == @user.id %>
-      <%= link_to "編集", edit_user_registration_path, class: "edit_btn" %>
+      <%= link_to "ユーザー編集", edit_user_registration_path, class: "edit_btn" %>
+      <%= link_to "お気に入り登録", new_user_favorite_path, class: "edit_btn" %>
+      <%= link_to "お気に入り編集", "#", class: "edit_btn" %>
     <% end %>
     <div class="user_fav">
       <div class="fav_team_title">

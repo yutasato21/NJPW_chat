@@ -5,6 +5,18 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    
+    @user = User.find(params[:user_id])
+    @favorite = @user.favorites.new(favorite_params)
+    if @favorite.save
+      redirect_to user_path(params[:user_id])
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def favorite_params
+    params.require(:favorite).permit(:fav_team, :fav_player)
   end
 end

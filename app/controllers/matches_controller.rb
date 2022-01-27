@@ -11,7 +11,7 @@ class MatchesController < ApplicationController
     @match = @room.matches.new(match_params)
    if @match.save
      redirect_to room_path(params[:room_id])
-   elsif 
+   else 
      render :new
    end
   end
@@ -22,7 +22,7 @@ class MatchesController < ApplicationController
   def update
     if @match.update(match_params)
       redirect_to room_path(params[:room_id])
-    elsif 
+    else 
       render :edit
     end
   end

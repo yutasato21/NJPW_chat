@@ -3,7 +3,7 @@
   justify-content: center;
 }
 
-.fav_team {
+.fav_team_column {
   height: 200px;
 }
 
@@ -17,7 +17,7 @@
   justify-content: center;
 }
 
-.fav_player {
+.fav_player_column {
   height: 200px;
 }
 

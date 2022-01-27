@@ -3,7 +3,7 @@ class CreateFavorites < ActiveRecord::Migration[6.0]
     create_table :favorites do |t|
       t.string     :fav_team
       t.string     :fav_player
-      t.references :user,      null: false, fareign_key: true
+      t.references :user,      null: false, foreign_key: true
       t.timestamps
     end
   end

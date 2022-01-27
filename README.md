@@ -28,7 +28,7 @@
 
 - has_many room
 - has_many comments
-- has_many favorites
+- has_one favorite
 
 ## rooms テーブル
 

@@ -9,5 +9,5 @@ class User < ApplicationRecord
 
   has_many :rooms
   has_many :comments
-  has_many :favorites
+  has_one :favorite
 end

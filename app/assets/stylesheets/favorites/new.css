@@ -1,0 +1,57 @@
+.fav_form {
+  display: flex;
+  justify-content: center;
+}
+
+.fav_team {
+  height: 200px;
+}
+
+.fav_team_text {
+  display: flex;
+  justify-content: center;
+}
+
+.fav_team_form {
+  display: flex;
+  justify-content: center;
+}
+
+.fav_player {
+  height: 200px;
+}
+
+.fav_player_text {
+  display: flex;
+  justify-content: center;
+}
+
+.fav_player_form {
+  display: flex;
+  justify-content: center;
+}
+
+.fav_text {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.fav_form {
+  height: 30px;
+  border: none;
+}
+
+.fav_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.fav_new_btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #38aef0;
+}

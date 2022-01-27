@@ -1,12 +1,28 @@
 <%= render "shared/header" %>
 <div class="main">
-  <div class="fav_new_form">
-    <%= form_with model: [@user, @favorite], local: true do |f| %>
-      <%= f.label :お気に入りのユニット, class: "fav_team_text" %>
-      <%= f.text_field :fav_team, placeholder: "ユニット名を入力", class: "fav_team_form" %>
-      <%= f.label :お気に入りの選手, class: "fav_player_text" %>
-      <%= f.text_field :fav_player, placeholder: "選手名を入力", class: "fav_player_form" %>
-      <%= f.submit "登録", class: "fav_new_btn" %>
-    <% end %>
-  </div>
+  <%= form_with model: [@user, @favorite], local: true do |f| %>
+    <div class="fav_form">
+      <div class="fav_new_form">
+        <div class="fav_team">
+          <div class="fav_team_text">
+            <%= f.label :お気に入りのユニット, class: "fav_text" %>
+          </div>
+          <div class="fav_team_form">
+            <%= f.text_field :fav_team, placeholder: "ユニット名を入力", class: "fav_form" %>
+          </div>
+        </div>
+        <div class="fav_player">
+          <div class="fav_player_text">
+            <%= f.label :お気に入りの選手, class: "fav_text" %>
+          </div>
+          <div class="fav_player_form">
+            <%= f.text_field :fav_player, placeholder: "選手名を入力", class: "fav_form" %>
+          </div>
+        </div>
+        <div class="fav_btn">
+          <%= f.submit "登録", class: "fav_new_btn" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>

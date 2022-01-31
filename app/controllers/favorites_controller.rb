@@ -13,6 +13,14 @@ class FavoritesController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
+  def update
+    
+  end
+
   private
 
   def favorite_params

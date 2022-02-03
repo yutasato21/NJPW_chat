@@ -19,7 +19,8 @@ class FavoritesController < ApplicationController
   end
 
   def update
-    
+    @user = User.find(params[:user_id])
+    @favorite = Favorite.find(params[:id])
   end
 
   private

@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to room_path(params[:room_id])
   end

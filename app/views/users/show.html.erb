@@ -10,7 +10,7 @@
         <% if @user.favorite.nil? %>
           <%= link_to "お気に入り登録", new_user_favorite_path(params[:id]), class: "edit_btn" %>
         <% else %>
-          <%= link_to "お気に入り編集", "#", class: "edit_btn" %>
+          <%= link_to "お気に入り編集", edit_user_favorite(params[:id]), class: "edit_btn" %>
         <% end %>
       </div>
     <% end %>
